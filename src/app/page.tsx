@@ -4,6 +4,11 @@ import NavBar from "@/component/nav-bar";
 import { useTranslation } from "@/lib/translation-context";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import bg2 from "../../public/images/2.jpg";
+import map from "../../public/images/map.jpg";
+import logo from "../../public/ctlco.png";
+import fr from "../../public/images/1.jpg";
+import r from "../../public/images/b1.jpg";
 
 const App = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -25,15 +30,15 @@ const App = () => {
   const newsItems = [
     {
       title: t("news1"),
-      image: "https://unsplash.com/fr/photos/homme-debout-entre-de-grands-arbres-F-0BxGuVvo",
+      image: bg2,
     },
     {
       title: t("news2"),
-      image: "https://unsplash.com/fr/photos/homme-debout-entre-de-grands-arbres-F_-0BxGuVvo",
+      image: "../../public/images/2.jpg",
     },
     {
       title: t("news3"),
-      image: "https://unsplash.com/fr/photos/homme-debout-entre-de-grands-arbres-F_-0BxGuVvo",
+      image: "../../public/images/2.jpg",
     },
   ];
 
@@ -77,12 +82,14 @@ const App = () => {
       {/* Hero Section with background image */}
       <section
         id="home"
-        className="relative h-screen bg-cover bg-center"
-        style={{
-          backgroundImage: `url('https://placehold.co/1920x1080/4f46e5/ffffff?text=Hero+Image')`,
-        }}
+        className="relative h-screen bg-cover bg-cente"
+        // style={{
+        //   backgroundImage: "url(/images/1.jpg)",
+        // }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-50">
+          <Image src={r} alt="photo-team" className="w-full h-full object-cover" />
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
             <div className="text-white">
@@ -108,27 +115,27 @@ const App = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white bg-opacity-20 p-4 rounded-lg backdrop-blur-sm">
                   <Image
-                    src="https://placehold.co/300x200/ffffff/4f46e5?text=Child+with+School+Supplies"
+                    src={fr}
                     alt="Child with school supplies"
-                    fill
-                     unoptimized
+                    className="rounded-lg w-full"
+                    //  unoptimized
                   />
                 </div>
                 <div className="bg-white bg-opacity-20 p-4 rounded-lg backdrop-blur-sm mt-8">
                   <Image
-                    src="https://placehold.co/300x200/ffffff/4f46e5?text=Mother+with+Food+Kit"
+                    src={fr}
                     alt="Mother with food kit"
-                    fill
-                     unoptimized
+                    className="rounded-lg w-full"
+                    //  unoptimized
                   />
                 </div>
                 <div className="bg-white bg-opacity-20 p-4 rounded-lg backdrop-blur-sm col-span-2">
                   <Image
-                    src="https://placehold.co/300x200/ffffff/4f46e5?text=Volunteer+in+Action"
+                    src={bg2}
                     alt="Volunteer in action"
-                    // className="rounded-lg w-full"
-                    fill
-                     unoptimized
+                    className="rounded-lg w-full"
+                    // fill
+                    //  unoptimized
                   />
                 </div>
               </div>
@@ -219,11 +226,11 @@ const App = () => {
             <div>
               <div className="bg-white bg-opacity-20 p-2 rounded-lg backdrop-blur-sm">
                 <Image
-                  src="https://placehold.co/600x400/f8fafc/4f46e5?text=Our+Team+in+Action"
+                  src={logo}
                   alt="Our team in action"
-                  // className="rounded-lg w-full"
-                  fill
-                   unoptimized
+                  className="rounded-lg w-full"
+                  // fill
+                  //  unoptimized
                 />
               </div>
             </div>
@@ -266,11 +273,11 @@ const App = () => {
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white relative">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="https://placehold.co/1920x1080/4f46e5/ffffff?text=Background+Pattern"
+            src={bg2}
             alt="Background"
-            // className="w-full h-full object-cover"
-            fill
-             unoptimized
+            className="w-full h-full object-cover"
+            // fill
+            //  unoptimized
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -390,11 +397,11 @@ const App = () => {
               >
                 <div className="h-48 overflow-hidden">
                   <Image
-                    src={news.image}
+                    src={bg2}
                     alt={news.title}
-                    // className="w-full h-full object-cover"
-                  fill
-                     unoptimized
+                    className="w-full h-full object-cover"
+                    // fill
+                    //    unoptimized
                   />
                 </div>
                 <div className="p-6">
@@ -416,11 +423,11 @@ const App = () => {
       <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600 text-white relative">
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="https://placehold.co/1920x1080/4f46e5/ffffff?text=Map+Background"
+            src={bg2}
             alt="Map background"
-            // className="w-full h-full object-cover"
-            fill
-             unoptimized
+            className="w-full h-full object-cover"
+            // fill
+            //  unoptimized
           />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -443,11 +450,11 @@ const App = () => {
 
             <div className="mt-8 bg-white bg-opacity-20 p-6 rounded-lg">
               <Image
-                src="https://placehold.co/800x400/ffffff/4f46e5?text=Map+of+DRC"
+                src={map}
                 alt="Map of DRC"
-                // className="w-full rounded-lg"
-                fill
-                 unoptimized
+                className="w-full rounded-lg"
+                // fill
+                //  unoptimized
               />
             </div>
           </div>

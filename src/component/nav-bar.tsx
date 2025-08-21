@@ -13,7 +13,7 @@ const NavBar = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <div>
-              <Image src={logo} alt="logo" width={'140'} height={'140'}/>
+              <Image src={logo} alt="logo" width={"140"} height={"140"} />
             </div>
           </div>
 
@@ -54,10 +54,12 @@ const NavBar = () => {
             <select
               value={language}
               onChange={(e) => setLanguage(e.target.value as "fr" | "en")}
-              className="border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="text-blue-600 border border-gray-300 rounded-md px-3 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              <option value="fr">FR</option>
-              <option value="en">EN</option>
+              {/* <option value="fr">FR</option>
+              <option value="en">EN</option> */}
+              <option value="fr">🇫🇷</option>
+              <option value="en">🇬🇧</option>
             </select>
 
             <button
